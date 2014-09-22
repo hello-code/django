@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from mysite.views import hello,current_datetime
+from mysite.views import hello,current_datetime,hours_ahead
 
 urlpatterns = patterns(
     '',
@@ -12,4 +12,5 @@ urlpatterns = patterns(
 
     url('^hello/$', hello),
     url('^time/$', current_datetime),
+    url(r'^time/plus/(\d{1,2})/$',hours_ahead),
 )
